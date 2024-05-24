@@ -25,7 +25,7 @@ console.log(addOne(1));
 console.log(addRandom());
 
 console.log(summarizeUser(name, age, hasHobbies));
-*/
+
 
 const person = {
   name: "Long",
@@ -44,26 +44,45 @@ printName(person);
 const { name, age } = person;
 console.log(name, age);
 
-// const copiedPerson = { ...person };
-// console.log(copiedPerson);
+const copiedPerson = { ...person };
+console.log(copiedPerson);
 
 const hobbies = ["Sports", "Cooking"];
 const [hobby1, hobby2] = hobbies;
 console.log(hobby1, hobby2);
-// for (let hobby of hobbies) {
-//   console.log(hobby);
-// }
+for (let hobby of hobbies) {
+  console.log(hobby);
+}
 
-// console.log(hobbies.map((hobby) => "Hobby: " + hobby));
+console.log(hobbies.map((hobby) => "Hobby: " + hobby));
 
-// person.greet();
-// console.log(hobbies);
+person.greet();
+console.log(hobbies);
 
 const copiedArray = [...hobbies];
-// console.log(copiedArray);
+console.log(copiedArray);
 
 const toArray = (...args) => {
   return args;
 };
 
-// console.log(toArray(1, 2, 3, 4));
+console.log(toArray(1, 2, 3, 4));
+*/
+
+const fetchData = () => {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Prepare fetch Data!!!");
+      resolve("Done!!!");
+    }, 1500);
+  });
+  return promise;
+};
+// fetchData();
+
+setTimeout(() => {
+  console.log("Kiem tra set time!!!");
+}, 2000);
+
+console.log("Hello!!!");
+console.log("Hi!!!");
